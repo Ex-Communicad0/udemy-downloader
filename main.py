@@ -1228,7 +1228,7 @@ def process_lecture(lecture, lecture_path, lecture_file_name, chapter_dir):
         sources = sorted(sources, key=lambda x: int(x.get("height")), reverse=True)
         if sources:
             if not os.path.isfile(lecture_path):
-                logger.info("      > Lecture doesn't have DRM, attempting to download...")
+                logger.info("      > Lecture doesn't have NO-DRM, attempting to download...")
                 source = sources[0]  # first index is the best quality
                 if isinstance(quality, int):
                     source = min(sources, key=lambda x: abs(int(x.get("height")) - quality))
